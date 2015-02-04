@@ -1,0 +1,275 @@
+here's my steps:
+
++. sudo apt-get install texlive-full     # may this is the final way
++. sudo apt-get install latex-cjk-all
++. sudo apt-get install texmaker
+
++. tex, latex, xetex, xelatex, pdflatex, texlive 的区别与联系
+  LaTeX 是TeX 中的一种格式(format) ，是建立在TeX 基础上的宏语言，也就是说，每一个LaTeX 命令实际上最后都会被转换解释成几个甚至上百个TeX 命令。但是，普通用户可以无需知道这中间的复杂联系。就象编程的时候如果使用一些已经编译好的函数库和模板可以使我们仅仅用几个命令就实现很多功能一 样，LaTeX 根据人们排版文章的习惯，定义了许多命令和模板，通过这些命令和模板，我们可以很快的得到漂亮的排版结果。
+  XeTex是一种使用Unicode的TeX排版引擎，并支持一些现代字体技术，例如 OpenType。其作者和维护者是Jonathan Kew，并以X11自由软件许可证发布。它原生的支持Unicode，并默认其输入文件为UTF-8编码。XeTeX可以在不进行额外配置的情况下直接使 用操作系统中安装的字体，因此可以直接利用OpenType，Graphite中的高级特性，例如额外的字形，花体，合字，可变的文本粗细等等。
+  XeLaTeX是使用LaTeX的排版引擎，也有上述XeTeX的优点，命令下直接使用xelatex file.tex就会产生对应的PDF文件。
+  pdflatex：pdfTex程序中的命令，用来编译用LaTeX格式写的tex文件。
+  TexLive: TexLive is a free software distribution for the TeX typesetting system that includes major TeX-related programs, macro packages and fonts. It is the replacement of its no-longer supported counterpart teTeX. It's now the default TeX distribution for several Linux distributions such as Fedora, Debian, Ubuntu.
+
+|---------------------------------------------------------
+| Engine | (Knuth)TeX | 真正的（原始的）TeX
+|        | XeTeX      | 相对于原始的 TeX，增加了Unicode和OpenType的支持
+|        | pdfTeX     | 它从tex文件不通过dvi文件直接生成pdf文件
+|--------|------------|-----------------------------------
+| Macro  | plainTeX   | 最古老的TeX宏集，提供了一些最基本的命令
+|        | AMSTeX     | 是美国数学会提供的一个TeX宏集，它添加了许多数学符号和数学字体
+|        | LaTeX      | 相对于PlainTeX，它使得科技文档的排版更加直观和方便
+|--------|------------|-----------------------------------
+| Dist   | TeXLive    | 国际TeX用户组织TUG开发,支持不同的操作系统
+|        | MiKTeX     | Windows 下广泛使用的一个TeX发行版
+|        | teTeX      | 一个Unix下的TeX发行版，现在已经停止更新且并入TeXLive
+|-----------------------------------------------------------
+
+
++. open texmaker...
+INPUT:
+
+\documentclass{article}
+\begin{document}
+ hello, world
+\end{document}
+
+Choose `PDFLaTex' and click `=>', and then `=> View PDF'
+or `xelatex file.tex && envince file.pdf'
+
++. title, author and comment
+NEWFILE:
+
+\documentclass{article}
+ \author{My Name}
+ \title{The Title}
+\begin{document}
+ \maketitle
+ hello, world         % This is comment
+\end{document}
+
++. paragraph
+NEWFILE:
+
+--------------------------------
+\documentclass{article}
+
+ \title{Hello World}
+
+\begin{document}
+
+ \maketitle
+
+ \section{Hello China} China is in East Asia.
+ \subsection{Hello Beijing} Beijing is the capital of China.
+ \subsubsection{Hello Dongcheng District}
+ \paragraph{Tian'anmen Square} is in the center of Beijin
+ \subparagraph{Chairman Mao} is in the center of Tian'anmen Square
+ \subsection{Hello Guangzhou}
+ \paragraph{Sun Yat-sen University} is the best university in Guangzhou
+  
+\end{document}
+---------------------------------
+
++. Table Of Contents
+NEWFILE:
+
+\begin{document}
+...
+\tableofcontents
+...
+\end{document}
+
++. NewLines
+NEWFILE:
+
+\begin{document}
+\maketitle
+
+Beijin is 
+the capital
+of China.
+
+New York is
+
+the capital
+
+of America.
+
+Amsterdam is \\ the capital \\
+of Netherlands.
+
+\end{document}
+
++. formula
+NEWFILE:
+
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+
+The Newton's second law is F=ma.
+
+The Newton's second law is $F=ma$.
+
+The Newton's second law is 
+$$F=ma$$
+
+The Newton's second law is \[F=ma\]
+
+Greek Letters $\eta$ and $\mu$
+
+Fraction $\frac{a}{b}$
+
+Power $a^b$
+
+Subscript $a_b$
+
+Derivate $\frac{\partial y}{\partial t}$
+
+Vector $\vec{n}$
+
+Bold $\mathbf{n}$
+
+To time differential $\dot{F}$
+
+Matrix (lcr here means left, center of right for each column)
+\[
+\left[
+\begin{array}{lcr}
+a1 & b22 & c333 \\
+d444 & e55555 & f6
+\end{array}
+\right]
+\]
+
+Equations(here \& is the symbol for aligning different rows)
+\begin{align}
+a+b&=c\\
+d&=e+f+g
+\end{align}
+
+\[
+\left\{
+\begin{aligned}
+&a+b=c\\
+&d=e+f+g
+\end{aligned}
+\right.
+\]
+
+\end{document}
+
++. images
+NEWFILE:
+
+\documentclass{article}
+\usepackage{graphicx}
+\begin{document}
+\includegraphics{nomoney.jpg}
+\end{document}
+
++. table
+NEWFILE:
+
+\documentclass{article}
+\begin{document} 
+  \begin{tabular}{|c|c|} 
+    a & b \\ 
+    c & d\\ 
+  \end{tabular} 
+
+  \begin{tabular}{|c|c|} 
+    \hline 
+    a & b \\ 
+    \hline 
+    c & d\\ 
+    \hline 
+  \end{tabular} 
+
+  \begin{center} 
+    \begin{tabular}{|c|c|} 
+      \hline 
+      a & b \\ \hline 
+      c & d\\ 
+      \hline 
+    \end{tabular} 
+  \end{center} 
+\end{document}
+
++. 中文支持
+NEWFILE:
+
+\documentclass{article}
+\usepackage{fontspec}
+
+% 对于 xeCJK 的选项可以查看 /usr/share/texmf-texlive/tex/xelatex/xecjk/xeCJK.sty
+% 文档中的 DeclareOption
+\usepackage[boldfont,slantfont]{xeCJK} % 允许粗体和斜体
+
+\setCJKmainfont{SimSun}
+\setCJKmonofont{WenQuanYi Micro Hei}
+\setCJKsansfont{WenQuanYi Micro Hei}
+\setmainfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+\setsansfont{DejaVu Sans}
+
+%% ------------设置中文字体--------------------------
+\setCJKfamilyfont{zhsong}{SimSun}                 % 宋体 songti
+\setCJKfamilyfont{zhyouyuan}{YouYuan}             % 幼圆 youyuan
+\setCJKfamilyfont{zhfangsong}{Adobe Fangsong Std} % 仿宋 fangsong
+\setCJKfamilyfont{zhkai}{Adobe Kaiti Std}         % 楷体 kaiti
+\setCJKfamilyfont{zhheiti}{WenQuanYi Micro Hei}   % 黑体 heiti
+\setCJKfamilyfont{zhxs}{NSimSun}                  % 新宋体 xsongti
+\setCJKfamilyfont{zhli}{LiSu}                     % 隶书 lisu
+\newcommand*{\songti}{\CJKfamily{zhsong}}
+\newcommand*{\youyuan}{\CJKfamily{zhyouyuan}}
+\newcommand*{\fangsong}{\CJKfamily{zhfangsong}}
+\newcommand*{\kaiti}{\CJKfamily{zhkai}}
+\newcommand*{\heiti}{\CJKfamily{zhheiti}}
+\newcommand*{\xsongti}{\CJKfamily{zhxs}}
+\newcommand*{\lisu}{\CJKfamily{zhli}}
+
+%------------------------------设置字体大小------------------------%
+\newcommand{\zero}{\fontsize{42pt}{\baselineskip}\selectfont}  %初号
+\newcommand{\mzero}{\fontsize{36pt}{\baselineskip}\selectfont} %小初号
+\newcommand{\one}{\fontsize{28pt}{\baselineskip}\selectfont}   %一号
+\newcommand{\two}{\fontsize{21pt}{\baselineskip}\selectfont}   %二号
+\newcommand{\mtwo}{\fontsize{18pt}{\baselineskip}\selectfont}  %小二号
+\newcommand{\three}{\fontsize{15.75pt}{\baselineskip}\selectfont} %三号
+\newcommand{\four}{\fontsize{14pt}{\baselineskip}\selectfont}  %四号
+\newcommand{\mfour}{\fontsize{12pt}{\baselineskip}\selectfont} %小四号
+\newcommand{\five}{\fontsize{10.5pt}{\baselineskip}\selectfont} %五号
+\newcommand{\mfive}{\fontsize{9pt}{\baselineskip}\selectfont} %小五号
+\newcommand{\size}{\fontsize{7.875pt}{\baselineskip}\selectfont} %六号
+\newcommand{\seven}{\fontsize{5.25pt}{\baselineskip}\selectfont} %七号
+
+\begin{document}
+Cowards die many times before their deaths.\\
+
+懦夫在未死之前，已身历多次死亡的恐怖了。
+\end{document}
+
++. references
+| CTEX - 在线文档 - TeX/LaTeX 常用宏包 | http://www.ctex.org/documents/packages/layout/index.htm 
+| 我常用的Latex中文报告模板(一)         | http://www.cnblogs.com/haippy/archive/2012/05/18/2507337.html
+| 如何编写Latex宏包（一）              | http://www.cnblogs.com/liyropt/archive/2011/04/07/2007942.html
+| 如何编写宏包                        | http://math.ecnu.edu.cn/~latex/faq/cls.htm 
++. 查看中文字体
+$ fc-list :lang=zh
+
+++++++++++++++++++++++
+中文编排习惯
+1. 首行缩进
+\usepackage{indentfirst}
+2. 用 hyperref 生成含有中文的 bookmark 的 PDF 文件
+\usepackage[unicode,CJKbookmarks]{hyperref}
+
++. 编写 .cls/.sty
+正如前面所说，class(.cls)和style(.sty) 就是命令和配置的集合，里面就是TeX和LaTeX 的语法。简单的说只要把原先导言区部分的内容转移到一个单独的文件（比如thuthesis.sty）再添加两个特殊的命令：
+
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{thuthesis}[2005/07/06]
+....
