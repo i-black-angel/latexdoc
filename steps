@@ -1,20 +1,26 @@
-here's my steps:
+latex简单教程
 
+本教程试验平台为 ubuntu 12.04
+
+安装
 +. sudo apt-get install texlive-full     # may this is the final way
 +. sudo apt-get install latex-cjk-all
 +. sudo apt-get install texmaker
 
+概念解释
 +. tex, latex, xetex, xelatex, pdflatex, texlive 的区别与联系
   LaTeX 是TeX 中的一种格式(format) ，是建立在TeX 基础上的宏语言，也就是说，每一个LaTeX 命令实际上最后都会被转换解释成几个甚至上百个TeX 命令。但是，普通用户可以无需知道这中间的复杂联系。就象编程的时候如果使用一些已经编译好的函数库和模板可以使我们仅仅用几个命令就实现很多功能一 样，LaTeX 根据人们排版文章的习惯，定义了许多命令和模板，通过这些命令和模板，我们可以很快的得到漂亮的排版结果。
   XeTex是一种使用Unicode的TeX排版引擎，并支持一些现代字体技术，例如 OpenType。其作者和维护者是Jonathan Kew，并以X11自由软件许可证发布。它原生的支持Unicode，并默认其输入文件为UTF-8编码。XeTeX可以在不进行额外配置的情况下直接使 用操作系统中安装的字体，因此可以直接利用OpenType，Graphite中的高级特性，例如额外的字形，花体，合字，可变的文本粗细等等。
   XeLaTeX是使用LaTeX的排版引擎，也有上述XeTeX的优点，命令下直接使用xelatex file.tex就会产生对应的PDF文件。
   pdflatex：pdfTex程序中的命令，用来编译用LaTeX格式写的tex文件。
   TexLive: TexLive is a free software distribution for the TeX typesetting system that includes major TeX-related programs, macro packages and fonts. It is the replacement of its no-longer supported counterpart teTeX. It's now the default TeX distribution for several Linux distributions such as Fedora, Debian, Ubuntu.
+   xeCJK: xeCJK 是一个 XeLaTeX 宏包，用于排版中日韩（CJK）文字。xeCJK 的原始作者是孙文昌，2009年5月起宏包被收入ctex-kit项目进行维护。
 
 |---------------------------------------------------------
 | Engine | (Knuth)TeX | 真正的（原始的）TeX
 |        | XeTeX      | 相对于原始的 TeX，增加了Unicode和OpenType的支持
 |        | pdfTeX     | 它从tex文件不通过dvi文件直接生成pdf文件
+|        | XeLaTeX    | 使用 LaTeX 宏包的排版引擎，继承了 XeTeX 的优点
 |--------|------------|-----------------------------------
 | Macro  | plainTeX   | 最古老的TeX宏集，提供了一些最基本的命令
 |        | AMSTeX     | 是美国数学会提供的一个TeX宏集，它添加了许多数学符号和数学字体
@@ -24,7 +30,6 @@ here's my steps:
 |        | MiKTeX     | Windows 下广泛使用的一个TeX发行版
 |        | teTeX      | 一个Unix下的TeX发行版，现在已经停止更新且并入TeXLive
 |-----------------------------------------------------------
-
 
 +. open texmaker...
 INPUT:
