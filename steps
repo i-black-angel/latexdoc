@@ -271,6 +271,8 @@ $ fc-list :lang=zh
 \usepackage{indentfirst}
 2. 用 hyperref 生成含有中文的 bookmark 的 PDF 文件
 \usepackage[unicode,CJKbookmarks]{hyperref}
+3. 时间日期用中文表达方式
+\renewcommand\today{\number\year 年 \number\month 月 \number\day 日}
 
 +. 编写 .cls/.sty
 正如前面所说，class(.cls)和style(.sty) 就是命令和配置的集合，里面就是TeX和LaTeX 的语法。简单的说只要把原先导言区部分的内容转移到一个单独的文件（比如thuthesis.sty）再添加两个特殊的命令：
@@ -279,4 +281,3 @@ $ fc-list :lang=zh
 \ProvidesPackage{thuthesis}[2005/07/06]
 ....
 
-+. 
