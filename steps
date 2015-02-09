@@ -273,6 +273,8 @@ $ fc-list :lang=zh
 \usepackage[unicode,CJKbookmarks]{hyperref}
 3. 时间日期用中文表达方式
 \renewcommand\today{\number\year 年 \number\month 月 \number\day 日}
+4. 温度表达
+$-30\,^{\circ}\mathrm{C}$
 
 +. 编写 .cls/.sty
 正如前面所说，class(.cls)和style(.sty) 就是命令和配置的集合，里面就是TeX和LaTeX 的语法。简单的说只要把原先导言区部分的内容转移到一个单独的文件（比如thuthesis.sty）再添加两个特殊的命令：
@@ -281,3 +283,17 @@ $ fc-list :lang=zh
 \ProvidesPackage{thuthesis}[2005/07/06]
 ....
 
++. table & figure
+1. 经常会看到Table或者Figure后面加上[htb]，
+其中
+  h -- here
+  t -- top
+  b -- bottom
+h表示here, t –top, b-bottom，即表格在文中的位置。
+2. 调整表格列高、行高及大小。可以使用：
+/begin{table} /renewcommand{/arraystretch}{1.5}   //调整行高到原来1.5倍
+/begin{table} /addtolength{/tabcolsep}{-2pt}  //减少列宽-2pt
+/begin{table} /small    //缩小表格尺寸到最小
+3. 表格的对齐及边框
+/begin{tabular}{|l||r|r|r|c|}  
+此处，l表示left, r表示right, c表示center。
