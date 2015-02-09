@@ -1,0 +1,29 @@
+\ProvidesFile{zhfonts.def}
+
+\RequirePackage[boldfont,slantfont]{xeCJK} % 允许粗体和斜体
+\setCJKmainfont{SimSun}
+\setCJKmonofont{WenQuanYi Micro Hei}
+\setCJKsansfont{WenQuanYi Micro Hei}
+\setmainfont{DejaVu Serif}
+\setmonofont{DejaVu Sans Mono}
+\setsansfont{DejaVu Sans}
+
+%% ------------- 设置中文字体 -------------------------
+\setCJKfamilyfont{zhsong}{SimSun}                 % 宋体 songti
+\setCJKfamilyfont{zhheiti}{WenQuanYi Micro Hei}   % 黑体 heiti
+\newcommand*{\songti}{\CJKfamily{zhsong}}
+\newcommand*{\heiti}{\CJKfamily{zhheiti}}
+
+%------------------------------设置字体大小------------------------%
+\newcommand{\zero}{\fontsize{42pt}{\baselineskip}\selectfont}  %初号
+\newcommand{\mzero}{\fontsize{36pt}{\baselineskip}\selectfont} %小初号
+\newcommand{\one}{\fontsize{28pt}{\baselineskip}\selectfont}   %一号
+\newcommand{\two}{\fontsize{21pt}{\baselineskip}\selectfont}   %二号
+\newcommand{\mtwo}{\fontsize{18pt}{\baselineskip}\selectfont}  %小二号
+\newcommand{\three}{\fontsize{15.75pt}{\baselineskip}\selectfont} %三号
+\newcommand{\four}{\fontsize{14pt}{\baselineskip}\selectfont}  %四号
+\newcommand{\mfour}{\fontsize{12pt}{\baselineskip}\selectfont} %小四号
+\newcommand{\five}{\fontsize{10.5pt}{\baselineskip}\selectfont} %五号
+\newcommand{\mfive}{\fontsize{9pt}{\baselineskip}\selectfont} %小五号
+\newcommand{\size}{\fontsize{7.875pt}{\baselineskip}\selectfont} %六号
+\newcommand{\seven}{\fontsize{5.25pt}{\baselineskip}\selectfont} %七号
