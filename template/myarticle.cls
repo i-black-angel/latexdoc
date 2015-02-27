@@ -6,10 +6,16 @@
 
 %% Page layout
 \RequirePackage[colorlinks]{hyperref}
-\hypersetup{linkcolor=black}
+%% \hypersetup{linkcolor=black}
 %% \hypersetup{pdfencoding=auto}
 %% \hypersetup{citecolor=magenta,linkcolor=blue}
 \RequirePackage[top=2.7truecm,bottom=2.2truecm,left=3truecm,right=3truecm,includefoot]{geometry}
+
+%% paragraph layout
+%% 首行缩进
+\RequirePackage{indentfirst}
+\setlength{\parindent}{2em}
+
 %% 页眉页脚设置
 \RequirePackage{fancyhdr}
 \pagestyle{fancyplain}
@@ -48,10 +54,13 @@
 \RequirePackage{amssymb}
 \RequirePackage{graphicx}
 \RequirePackage{color,xcolor}
+\RequirePackage{booktabs}
 
 %------------------------------标题名称中文化-----------------------------%
 \renewcommand{\figurename}{\heiti 图}
 \renewcommand{\tablename}{\heiti 表}
 \renewcommand{\contentsname}{\heiti 目\quad 录}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\abstractname}{摘要}
 
 \endinput
