@@ -9,10 +9,18 @@
 \setsansfont{DejaVu Sans}
 
 %% ------------- 设置中文字体 -------------------------
-\setCJKfamilyfont{zhsong}{SimSun}                 % 宋体 songti
-\setCJKfamilyfont{zhheiti}{WenQuanYi Micro Hei}   % 黑体 heiti
-\newcommand*{\songti}{\CJKfamily{zhsong}}
-\newcommand*{\heiti}{\CJKfamily{zhheiti}}
+\setCJKfamilyfont{zhsong}{SimSun}
+\setCJKfamilyfont{zhheiti}{WenQuanYi Micro Hei}
+\setCJKfamilyfont{zhkai}{KaiTi}
+\setCJKfamilyfont{zhfs}{FangSong}
+\setCJKfamilyfont{zhli}{LiSu}
+\setCJKfamilyfont{zhyou}{YouYuan}
+\newcommand*{\songti}{\CJKfamily{zhsong}}  % 宋体 songti
+\newcommand*{\heiti}{\CJKfamily{zhheiti}}  % 黑体 heiti
+\newcommand*{\kaishu}{\CJKfamily{zhkai}}   % 楷书 kaishu
+\newcommand*{\fangsong}{\CJKfamily{zhfs}}  % 仿宋 fangsong
+\newcommand*{\lishu}{\CJKfamily{zhli}}     % 隶书 lishu
+\newcommand*{\youyuan}{\CJKfamily{zhyou}}  % 幼圆 youyuan
 
 %------------------------------设置字体大小------------------------%
 \newcommand{\zero}{\fontsize{42pt}{\baselineskip}\selectfont}  %初号
