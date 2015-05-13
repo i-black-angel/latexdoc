@@ -4,7 +4,7 @@
 \setCJKmainfont{SimSun}
 \setCJKmonofont{WenQuanYi Micro Hei}
 \setCJKsansfont{WenQuanYi Micro Hei}
-\setmainfont{DejaVu Serif}
+\setmainfont{Times New Roman}
 \setmonofont{DejaVu Sans Mono}
 \setsansfont{DejaVu Sans}
 
